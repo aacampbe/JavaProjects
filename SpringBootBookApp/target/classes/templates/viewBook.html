@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="wheat">
+<br><br><br>
+<h1 align='center'>View Books</h1>
+<table border="2" cellpadding="20" align='center'>
+<tr>
+<td>Id</td><td>Book Name</td><td>Book Price</td><td>Book Author</td><td>Book Publisher</td><td>Book Genre</td>
+</tr>
+<tr th:each="book:${book}">
+<td th:text="${book.id}"></td>
+<td th:text="${book.book_name}"></td>
+<td th:text="${book.book_price}"></td>
+<td th:text="${book.book_author}"></td>
+<td th:text="${book.book_publisher}"></td>
+<td th:text="${book.book_genre}"></td>
+</table>
+</body> </html>
